@@ -14,3 +14,5 @@ Call the color method of your choice from any String, like in the example below:
 "I am a red text".text
 ```
 To sample all available colors use `String.sample_colors`
+# license
+Code released under the MIT license.
