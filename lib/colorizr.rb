@@ -22,8 +22,17 @@ class String
 
   end
 
-  # generates methods for all colors
+  # loops through the @colors and generates their methods
   def self.create_colors
-    #code to generate all color methods goes here
+    @colors.each do |color, code|
+      # def red
+      #   "\e31m#{self}\e[0m"
+      # end
+      self.send(:define_method, color) do
+        "\e[#{code}m#{self}\e[0m"
+      end
+    end
   end
 end
+
+String.create_colors
