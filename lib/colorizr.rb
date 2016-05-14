@@ -19,7 +19,9 @@ class String
 
   # outputs a string with all the sample colors
   def self.sample_colors
-
+    @colors.each do |color, code|
+      puts "This is \e[#{code}m#{color}\e[0m"
+    end
   end
 
   # loops through the @colors and generates their methods
