@@ -20,16 +20,13 @@ class String
   # outputs a string with all the sample colors
   def self.sample_colors
     @colors.each do |color, code|
-      puts "This is \e[#{code}m#{color}\e[0m"
+      puts "This is "+ color.to_s.send(color)
     end
   end
 
   # loops through the @colors and generates their methods
   def self.create_colors
     @colors.each do |color, code|
-      # def red
-      #   "\e31m#{self}\e[0m"
-      # end
       self.send(:define_method, color) do
         "\e[#{code}m#{self}\e[0m"
       end
@@ -38,3 +35,4 @@ class String
 end
 
 String.create_colors
+String.sample_colors

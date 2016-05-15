@@ -1,0 +1,11 @@
+How does your gem take advantage of Ruby’s metaprogramming capabilities?
+by generating class methods from an array of items by using the "define_method" method.
+
+How long did you spend working on this project?
+2 hours
+
+What was the most rewarding challenge you conquered?
+I learned how to make gems! very useful
+
+Where do you still have room to grow?
+using metaprogramming in more complex situations
